@@ -10,10 +10,10 @@
 	<!-- header -->
 	<header class="header navbar navbar-default">
 		<div class="container">
-			<div class="score navbar-text" id="score"></div>
-			<div class="scoreAuto navbar-text" id="scoreAuto"></div>
-			<div class="multiplicateurCont navbar-text" id="multiplicateurCont"></div>
-			<div class="message navbar-text" id="messageé"></div>
+			<div class="navbar-text" id="score"></div>
+			<div class="navbar-text" id="scoreAuto"></div>
+			<div class="navbar-text" id="multiplicateurCont"></div>
+			<div class="navbar-text" id="message"></div>
 		</div>
 	</header>
 	<!-- /header -->
@@ -21,15 +21,19 @@
 	<!-- /main -->
 	<main class="bouton">
 		<div class="container-fluid">
-			<button type="button" id="bouton" class="btn btn-primary btn-lg">Cick!</button>
+			<div class="col-md-6">
+				<button type="button" id="myBouton" class="btn btn-primary btn-lg"><p>Cick!</p><p class="glyphicon glyphicon-play"></p></button>
+			</div>
+			<div class="col-md-6">
+				<button type="button" id="achatMultiplicateur">Multiplicateur</button>
+			</div>
+			
 		</div>	
 	</main>
 	<!-- /main -->
 
 
-	<aside class="shop">
-		
-	</aside>
+
 
 
 <script src="./js/clicker.js" type="text/javascript" charset="utf-8" async defer></script>

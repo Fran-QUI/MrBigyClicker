@@ -1,24 +1,44 @@
-$bouton = document.getElementById("bouton");
+$bouton = document.getElementById("myBouton");
 $score = document.getElementById("score");
 $multiplicateurCont = document.getElementById("multiplicateurCont");
+$achatMultiplicateur = document.getElementById("achatMultiplicateur");
 
-scoreTotal = 1
-multiplicateur = 1
+
+var scoreTotal = 0;
+var multiplicateur = 1;
+var prixMultiplicateur = 25;
 
 
 function afficherLeScore() {
-	score.innerHTML = "Score : " + scoreTotal;
+	$score.innerHTML = "Score : " + scoreTotal;
 }
 
 function afficherMultiplicateur() {
-	multiplicateurCont.innerHTML = "Multiplicateur x " + multiplicateur;
-	}
+	$multiplicateurCont.innerHTML = "Multiplicateur x " + multiplicateur;
+}
 
-function click() {
+
+function point() {
 	scoreTotal = scoreTotal + multiplicateur;
 	afficherLeScore();
 }
 
-$bouton.onclick = click() ;
+function achatMultiplicateur() {
+	if ( scoreTotal >= prixMultiplicateur ) {
+		scoreTotal = scoreTotal - prixMultiplicateur ;
+		multiplicateur = multiplicateur + 1 ;
+		prixMultiplicateur = prixMultiplicateur * 2;
+	}
+
+	else {
+		alert("Pas Assez de points !!")
+	}
+	afficherLeScore();
+	afficherMultiplicateur();
+}
+
+
+$bouton.onclick = point;
+$achatMultiplicateur.onclick = achatMultiplicateur;
 afficherLeScore();
 afficherMultiplicateur();
