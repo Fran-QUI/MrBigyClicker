@@ -15,6 +15,7 @@ var $affPrixAutoclicker = document.getElementById("prixAutoclicker");
 var $autoclickerCont = document.getElementById("autoclickerCont");
 
 var scoreTotal = 0;
+
 var nbMultiplicateur = 1;
 var nbSuperMultiplicateur = 0;
 var nbAutoclicker = 0;
@@ -114,18 +115,24 @@ function autoclicker() {
 	}
 }
 
-//Actions
+//Actions des boutons
 $bouton.onclick = point;
 $achatMultiplicateur.onclick = achatMultiplicateur;
 $achatSuperMultiplicateur.onclick = achatSuperMultiplicateur;
 $achatAutoclicker.onclick = achatAutoclicker;
 
+//Action automatique
+setInterval(autoclicker, 1000);
+
+
+//Action au lancement
 afficherLeScore();
+
 afficherNbMultiplicateur();
 afficherNbSuperMultiplicateur();
 afficherNbAutoclicker();
+
 afficherPrixDuMultiplicateur();
 afficherPrixDuSuperMultiplicateur();
 afficherPrixAutoclicker();
 
-setInterval(autoclicker, 1000);
