@@ -1,1 +1,1 @@
-Je fait mon propre clicker.
+Je fais mon propre clicker.
